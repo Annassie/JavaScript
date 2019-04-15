@@ -1,0 +1,139 @@
+body {
+  margin: 0 auto;
+  max-width: 1400px;
+  display: grid;
+  grid-template-areas:
+    'header'
+    'data'
+    'spiro';
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  box-sizing: border-box;
+  width: 90%;
+  background-color: #bfbeff;
+  padding: 1vh 1vw;
+}
+
+#header,
+#data,
+#spiro {
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+#header {
+  grid-area: header;
+}
+
+#data {
+  grid-area: data;
+  margin-bottom: 20px;
+}
+
+#spiro {
+  grid-area: spiro;
+}
+
+#canvas {
+  width: 100%;
+  background-color: #000;
+}
+
+h1 {
+  color: #ff362b;
+  letter-spacing: 20px;
+}
+
+#form {
+  text-align: right;
+}
+
+input {
+  outline: none;
+  margin-bottom: 10px;
+  background-color: #fff3e0;
+}
+
+button {
+  background-color: #5853ff;
+  color: #eeeee0;
+  border: none;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+button:hover {
+  background-color: #0b05aa;
+  color: #5df558;
+}
+
+input:invalid:not(:placeholder-shown) {
+  border-color: #b22222;
+}
+
+input:valid:not(:placeholder-shown) {
+  border-color: #008000;
+}
+
+::-webkit-input-placeholder {
+  color: #7eb0bd;
+}
+
+::-moz-placeholder {
+  color: #7eb0bd;
+}
+
+:-ms-input-placeholder {
+  color: #7eb0bd;
+}
+
+:-moz-placeholder {
+  color: #7eb0bd;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (max-width: 768px) {
+  body {
+    grid-template-areas:
+      'header'
+      'data'
+      'spiro';
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+  }
+} */
+
+/* Medium devices (landscape tablets, 768px and up)
+@media only screen and (min-width: 768px) {
+  body {
+    grid-template-areas:
+      'header'
+      'data'
+      'spiro';
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+  }
+} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {
+  body {
+    grid-template-areas:
+      'header'
+      'data'
+      'spiro';
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+  }
+} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  body {
+    grid-template-areas:
+      'header header header'
+      'data spiro spiro';
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+  }
+}

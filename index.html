@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spirograph, Niukkanen Anna [L8360], Harjoitustyö</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="spiro.js" defer></script>
+</head>
+
+<body>
+
+  <header id="header">
+    <h1>SPIROGRAPH</h1>
+  </header>
+
+  <div id="data">
+    <h2>Syötä radius ja diameter</h2>
+    <form id="form">
+      Suurempi Radius: <input id="n1" type="text" size="25" placeholder="Kirjoita luku (50-350)" pattern="^\d*\.?\d*$"
+        autofocus required><br>
+      Pienempi radius: <input id="n2" type="text" size="25" placeholder="Kirjoita luku (20-250)" pattern="^\d*\.?\d*$"
+        required><br>
+      Diameter: <input id="n3" type="text" size="25" placeholder="Kirjoita luku (10-200)" pattern="^\d*\.?\d*$"
+        required><br>
+      <button id="startButton" type="button" onclick="startDraw(n1.value, n2.value, n3.value)">Start</button>
+      <button id="stopButton" type="button" onclick="stopDraw()">Stop</button>
+      <button id="clearButton" type="button" onclick="clearCanvas()">Tyhjennä</button>
+    </form>
+  </div>
+
+  <div id="spiro">
+    <canvas id="canvas" width="800px" height="600px"></canvas>
+  </div>
+
+</body>
+
+</html>
